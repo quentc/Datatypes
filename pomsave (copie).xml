@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <groupId>fr_miagecq</groupId>
+  <artifactId>Datatypes</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Datatypes</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven−pmd−plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+		    <locales>en</locales>
+                    <linkXref>true</linkXref>
+                    <sourceEncoding>utf−8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.6</targetJdk>
+                    <rulesets>
+                       <ruleset>/rulesets/sunsecure.xml</ruleset>
+                        <ruleset>/rulesets/naming.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+    
+    
+     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <linkXRef>true</linkXRef>
+                    <rulesets>
+                        <rulset>rulesets/java/sunsecure.xml</rulset>
+                        <rulset>rulesets/java/naming.xml</rulset>
+                        <rulset>rulesets/java/braces.xml</rulset>
+                        <rulset>rulesets/java/coupling.xml</rulset>
+                    </rulesets>
+                </configuration>
+
+            </plugin>
+            <plugin> 
+                <groupId>org.apache.maven.plugins</groupId> 
+                <artifactId>maven-checkstyle-plugin</artifactId> 
+                <version>2.3.2</version>
+                <configuration> 
+                    <configLocation>config/maven_checks.xml</configLocation> 
+                </configuration> 
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+
+_____________ 
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.0-beta-3</version>
+    <packaging>jar</packaging>
+
+  <build>
+  <plugins>
+   <plugin>
+   	<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.0.1</version>
+
+    <configuration>
+     <reportPlugins> <!-- Ici 1 seul rapport , celui des informations standards du POM-->
+
+     
+     </reportPlugins>
+    </configuration>
+   </plugin>
+  </plugins>
+</build>
+
+</project>
+
